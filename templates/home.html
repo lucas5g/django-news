@@ -6,7 +6,7 @@
 
 {% block content %}
   {% if user.is_authenticated %}
-    {{ user.username }}
+    Hi {{ user.username }}
     <form method="post" action="{% url 'logout' %}">
       {% csrf_token %}
       <button type="submit">Log Out</button>
